@@ -10,9 +10,6 @@ COPY package*.json ./
 # Instala las dependencias
 RUN npm install
 
-# Instalamos PM2 globalmente
-RUN npm install pm2 -g
-
 # Copiamos todo el código de la aplicación al contenedor
 COPY . .
 
@@ -20,4 +17,4 @@ COPY . .
 EXPOSE 5003
 
 # Usamos PM2 para iniciar la aplicación
-CMD ["pm2", "start", "server.js", "--name", "gastos-service", "--watch"]
+CMD ["npm", "start"]

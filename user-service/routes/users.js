@@ -56,7 +56,7 @@ router.post('/register', async (req, res) => {
             from: 'finanzapp9@gmail.com',
             to: Correo,
             subject: 'Verificación de correo electrónico - Finantec',
-            text: `Por favor, verifica tu correo haciendo clic en el siguiente enlace: http://localhost:5000/api/users/verify/${verificationToken}`,
+            text: `Por favor, verifica tu correo haciendo clic en el siguiente enlace: http://44.201.13.61:5000/api/users/verify/${verificationToken}`,
         };
 
         transporter.sendMail(mailOptions, (error, info) => {
